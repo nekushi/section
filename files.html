@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSCS 3A - Files</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/files.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1>BSCS 3A</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="./login.php">Login/Register</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h3>Dashboard</h3>
+          <div class="sidebar-toggle">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="announcements.html">
+                <i class="fas fa-bullhorn"></i>
+                <span>Announcements</span>
+              </a>
+            </li>
+            <li>
+              <a href="chat.html">
+                <i class="fas fa-comments"></i>
+                <span>General Chat</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="files.html">
+                <i class="fas fa-file-alt"></i>
+                <span>Files</span>
+              </a>
+            </li>
+            <li>
+              <a href="photos.html">
+                <i class="fas fa-images"></i>
+                <span>Photo Dumps</span>
+              </a>
+            </li>
+            <li>
+              <a href="events.html">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Events</span>
+              </a>
+            </li>
+            <li>
+              <a href="assignments.html">
+                <i class="fas fa-tasks"></i>
+                <span>Assignments</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="main-content">
+        <!-- Files Component -->
+        <section id="files" class="component-section">
+          <div class="component-header">
+            <h2><i class="fas fa-file-alt"></i> Files</h2>
+            <div class="component-actions">
+              <button class="btn-icon" title="Upload file">
+                <i class="fas fa-upload"></i>
+              </button>
+              <button class="btn-icon" title="Create new folder">
+                <i class="fas fa-folder-plus"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Breadcrumb Navigation -->
+          <div class="files-breadcrumb">
+            <ul>
+              <li>
+                <a href="#"><i class="fas fa-home"></i></a>
+              </li>
+              <li><a href="#">Class Materials</a></li>
+              <li>Programming</li>
+            </ul>
+          </div>
+
+          <div class="component-content">
+            <!-- Files Container -->
+            <div class="files-container">
+              <!-- Folder Section -->
+              <div class="files-section">
+                <h3>Folders</h3>
+                <div class="files-grid">
+                  <!-- Folder Item -->
+                  <div class="file-item folder">
+                    <div class="file-icon">
+                      <i class="fas fa-folder"></i>
+                    </div>
+                    <div class="file-info">
+                      <span class="file-name">Lectures</span>
+                      <span class="file-meta"
+                        >8 items - Last modified: June 12, 2023</span
+                      >
+                    </div>
+                    <div class="file-actions">
+                      <button class="btn-icon" title="More options">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Folder Item -->
+                  <div class="file-item folder">
+                    <div class="file-icon">
+                      <i class="fas fa-folder"></i>
+                    </div>
+                    <div class="file-info">
+                      <span class="file-name">Assignments</span>
+                      <span class="file-meta"
+                        >5 items - Last modified: June 15, 2023</span
+                      >
+                    </div>
+                    <div class="file-actions">
+                      <button class="btn-icon" title="More options">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Folder Item -->
+                  <div class="file-item folder">
+                    <div class="file-icon">
+                      <i class="fas fa-folder"></i>
+                    </div>
+                    <div class="file-info">
+                      <span class="file-name">Projects</span>
+                      <span class="file-meta"
+                        >3 items - Last modified: June 10, 2023</span
+                      >
+                    </div>
+                    <div class="file-actions">
+                      <button class="btn-icon" title="More options">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Files Section -->
+              <div class="files-section">
+                <h3>Files</h3>
+                <div class="files-grid">
+                  <!-- File Item -->
+                  <div class="file-item">
+                    <div class="file-icon pdf">
+                      <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="file-info">
+                      <span class="file-name">OOP_Concepts.pdf</span>
+                      <span class="file-meta"
+                        >2.4 MB - Uploaded by Prof. Santos</span
+                      >
+                    </div>
+                    <div class="file-actions">
+                      <button class="btn-icon" title="Download">
+                        <i class="fas fa-download"></i>
+                      </button>
+                      <button class="btn-icon" title="More options">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- File Item -->
+                  <div class="file-item">
+                    <div class="file-icon ppt">
+                      <i class="fas fa-file-powerpoint"></i>
+                    </div>
+                    <div class="file-info">
+                      <span class="file-name">Data_Structures.pptx</span>
+                      <span class="file-meta"
+                        >5.7 MB - Uploaded by Prof. Santos</span
+                      >
+                    </div>
+                    <div class="file-actions">
+                      <button class="btn-icon" title="Download">
+                        <i class="fas fa-download"></i>
+                      </button>
+                      <button class="btn-icon" title="More options">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- File Item -->
+                  <div class="file-item">
+                    <div class="file-icon doc">
+                      <i class="fas fa-file-word"></i>
+                    </div>
+                    <div class="file-info">
+                      <span class="file-name">Project_Requirements.docx</span>
+                      <span class="file-meta"
+                        >1.2 MB - Uploaded by Prof. Santos</span
+                      >
+                    </div>
+                    <div class="file-actions">
+                      <button class="btn-icon" title="Download">
+                        <i class="fas fa-download"></i>
+                      </button>
+                      <button class="btn-icon" title="More options">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- File Item -->
+                  <div class="file-item">
+                    <div class="file-icon code">
+                      <i class="fas fa-file-code"></i>
+                    </div>
+                    <div class="file-info">
+                      <span class="file-name">Example_Code.zip</span>
+                      <span class="file-meta"
+                        >3.8 MB - Uploaded by Prof. Santos</span
+                      >
+                    </div>
+                    <div class="file-actions">
+                      <button class="btn-icon" title="Download">
+                        <i class="fas fa-download"></i>
+                      </button>
+                      <button class="btn-icon" title="More options">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- File Item -->
+                  <div class="file-item">
+                    <div class="file-icon excel">
+                      <i class="fas fa-file-excel"></i>
+                    </div>
+                    <div class="file-info">
+                      <span class="file-name">Grades_Template.xlsx</span>
+                      <span class="file-meta"
+                        >0.9 MB - Uploaded by Prof. Santos</span
+                      >
+                    </div>
+                    <div class="file-actions">
+                      <button class="btn-icon" title="Download">
+                        <i class="fas fa-download"></i>
+                      </button>
+                      <button class="btn-icon" title="More options">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 BSCS 3A. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/components.js"></script>
+  </body>
+</html>

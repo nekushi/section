@@ -387,6 +387,7 @@ nav ul li a:hover::after {
 }
 
 .form-submit {
+  display: block;
   width: 100%;
   padding: 1rem;
   background: #007bff;

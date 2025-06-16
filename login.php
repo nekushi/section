@@ -58,7 +58,9 @@
                 name="password"
                 required />
             </div>
-            <button type="submit" class="form-submit">Login</button>
+            <a href="./components.html" class="a-form-submit">
+              <button type="button" class="form-submit">Login</button>
+            </a>
           </form>
           <div class="form-footer">
             <a href="#">Forgot password?</a>
