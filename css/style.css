@@ -424,6 +424,10 @@ footer {
   text-align: center;
 }
 
+p.success {
+  color: #208e20;
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
   .about-grid {

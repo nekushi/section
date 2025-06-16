@@ -21,7 +21,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="login.html" class="active">Login/Register</a></li>
+          <li><a href="login.php" class="active">Login/Register</a></li>
         </ul>
       </nav>
       <div class="menu-toggle">
@@ -35,6 +35,45 @@
       <h1>Account Access</h1>
     </div>
   </section>
+
+  <?php
+  include("database.php");
+
+  $firstname = $lastname = $email = $studentId = $password = $cpassword = "";
+  $success = $error = "";
+
+  function zod($data)
+  {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+
+  if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $firstname = zod($_POST["first-name"]);
+    $lastname = zod($_POST["last-name"]);
+    $email = zod($_POST["email"]);
+    $studentId = zod($_POST["student_id"]);
+    $password = zod($_POST["password"]);
+    $cpassword = zod($_POST["confirm_password"]);
+  }
+
+  $sql = "SELECT * FROM accounts WHERE studentId='$studentId'";
+  $result = mysqli_query($conn, $sql);
+
+  if ($result->num_rows > 0) {
+    $error = "Student ID already registered.";
+  } else {
+    $sql = "INSERT INTO accounts (firstName, lastName, email, studentId, password, cpassword) VALUES ('$firstname', '$lastname', '$email', '$studentId', '$password', '$cpassword')";
+
+    if (mysqli_query($conn, $sql)) {
+      $success = "Data created successfully";
+    }
+
+    $conn->close();
+  }
+  ?>
 
   <section class="auth-section">
     <div class="container">
@@ -58,17 +97,23 @@
                 name="password"
                 required />
             </div>
-            <a href="./components.html" class="a-form-submit">
+            <a href="./dashboard/index.html" class="a-form-submit">
               <button type="button" class="form-submit">Login</button>
             </a>
           </form>
           <div class="form-footer">
             <a href="#">Forgot password?</a>
           </div>
+          <p class="success">
+            <?php
+            echo "{$success}";
+            ?>
+          </p>
         </div>
 
+        <!-- REGISTER ACCOUNT -->
         <div class="auth-form" id="register-form">
-          <form action="#" method="POST">
+          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
             <div class="form-group">
               <label for="register-first-name">First Name</label>
               <input type="text" id="register-first-name" name="first-name" required />

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSCS 3A - Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="dashboard-page">
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1>BSCS 3A</h1>
+        </div>
+        <nav class="navbars">
+          <ul>
+            <li><a href="./index.html#announcements">Announcements</a></li>
+            <li><a href="./index.html#general-chat">General Chat</a></li>
+            <li><a href="./index.html#files">Files</a></li>
+            <li><a href="./index.html#photo-dumps">Photo Dumps</a></li>
+            <li><a href="./index.html#events">Events</a></li>
+            <li><a href="./index.html#assignments">Assignments</a></li>
+            <li><a href="./index.html#projects">Projects</a></li>
+            <li><a href="./index.html#members">Members</a></li>
+            <li><a href="./index.html#schedule">My Schedule</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <div class="dashboard-container">
+      <!-- Sidebar Overlay -->
+      <div class="sidebar-overlay"></div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h3>Dashboard</h3>
+          <div class="sidebar-toggle">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="#announcements">
+                <i class="fas fa-bullhorn"></i>
+                <span>Announcements</span>
+              </a>
+            </li>
+            <li>
+              <a href="#general-chat">
+                <i class="fas fa-comments"></i>
+                <span>General Chat</span>
+              </a>
+            </li>
+            <li>
+              <a href="#files">
+                <i class="fas fa-file-alt"></i>
+                <span>Files</span>
+              </a>
+            </li>
+            <li>
+              <a href="#photo-dumps">
+                <i class="fas fa-images"></i>
+                <span>Photo Dumps</span>
+              </a>
+            </li>
+            <li>
+              <a href="#events">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Events</span>
+              </a>
+            </li>
+            <li>
+              <a href="#assignments">
+                <i class="fas fa-tasks"></i>
+                <span>Assignments</span>
+              </a>
+            </li>
+            <li>
+              <a href="#projects">
+                <i class="fas fa-project-diagram"></i>
+                <span>Projects</span>
+              </a>
+            </li>
+            <li>
+              <a href="#members">
+                <i class="fas fa-users"></i>
+                <span>Members</span>
+              </a>
+            </li>
+            <li>
+              <a href="#schedule">
+                <i class="fas fa-calendar-week"></i>
+                <span>My Schedule</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- User Profile Section -->
+        <div class="sidebar-profile">
+          <div class="profile-info">
+            <div class="profile-avatar">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="profile-details">
+              <h4>John Doe</h4>
+              <p>john.doe@example.com</p>
+            </div>
+          </div>
+          <a href="../login.php" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="main-content">
+        <!-- Announcements Section -->
+        <section id="announcements" class="component-section">
+          <div class="component-header">
+            <h2><i class="fas fa-bullhorn"></i> Announcements</h2>
+            <div class="component-actions">
+              <button class="btn-icon" title="Add announcement">
+                <i class="fas fa-plus"></i>
+              </button>
+              <button class="btn-icon" title="Filter announcements">
+                <i class="fas fa-filter"></i>
+              </button>
+            </div>
+          </div>
+          <div class="component-content">
+            <div class="placeholder">
+              <i class="fas fa-bullhorn placeholder-icon"></i>
+              <p>No announcements yet</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- General Chat Section -->
+        <section id="general-chat" class="component-section hidden">
+          <div class="component-header">
+            <h2><i class="fas fa-comments"></i> General Chat</h2>
+            <div class="component-actions">
+              <button class="btn-icon" title="View participants">
+                <i class="fas fa-users"></i>
+              </button>
+              <button class="btn-icon" title="Search messages">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <div class="component-content">
+            <div class="chat-container">
+              <div class="chat-messages">
+                <div class="placeholder">
+                  <i class="fas fa-comments placeholder-icon"></i>
+                  <p>No messages yet</p>
+                </div>
+              </div>
+              <div class="chat-input">
+                <input type="text" placeholder="Type your message..." />
+                <button class="btn-send" title="Send message">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Files Section -->
+        <section id="files" class="component-section hidden">
+          <div class="component-header">
+            <h2><i class="fas fa-file-alt"></i> Files</h2>
+            <div class="component-actions">
+              <button class="btn-icon" title="Upload file">
+                <i class="fas fa-upload"></i>
+              </button>
+              <button class="btn-icon" title="Create new folder">
+                <i class="fas fa-folder-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="component-content">
+            <div class="files-container">
+              <div class="placeholder">
+                <i class="fas fa-file-alt placeholder-icon"></i>
+                <p>No files uploaded yet</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Photo Dumps Section -->
+        <section id="photo-dumps" class="component-section hidden">
+          <div class="component-header">
+            <h2><i class="fas fa-images"></i> Photo Dumps</h2>
+            <div class="component-actions">
+              <button class="btn-icon" title="Upload photos">
+                <i class="fas fa-upload"></i>
+              </button>
+              <button class="btn-icon" title="Change view">
+                <i class="fas fa-th-large"></i>
+              </button>
+            </div>
+          </div>
+          <div class="component-content">
+            <div class="photos-container">
+              <div class="placeholder">
+                <i class="fas fa-images placeholder-icon"></i>
+                <p>No photos uploaded yet</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="component-section hidden">
+          <div class="component-header">
+            <h2><i class="fas fa-calendar-alt"></i> Events</h2>
+            <div class="component-actions">
+              <button class="btn-icon" title="Add event">
+                <i class="fas fa-plus"></i>
+              </button>
+              <button class="btn-icon" title="Filter events">
+                <i class="fas fa-filter"></i>
+              </button>
+            </div>
+          </div>
+          <div class="component-content">
+            <div class="events-container">
+              <div class="placeholder">
+                <i class="fas fa-calendar-alt placeholder-icon"></i>
+                <p>No upcoming events</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Assignments Section -->
+        <section id="assignments" class="component-section hidden">
+          <div class="component-header">
+            <h2><i class="fas fa-tasks"></i> Assignments</h2>
+            <div class="component-actions">
+              <button class="btn-icon" title="Add assignment">
+                <i class="fas fa-plus"></i>
+              </button>
+              <button class="btn-icon" title="Sort assignments">
+                <i class="fas fa-sort"></i>
+              </button>
+            </div>
+          </div>
+          <div class="component-content">
+            <div class="assignments-container">
+              <div class="placeholder">
+                <i class="fas fa-tasks placeholder-icon"></i>
+                <p>No assignments yet</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="component-section hidden">
+          <div class="component-header">
+            <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+            <div class="component-actions">
+              <button class="btn-icon" title="Add project">
+                <i class="fas fa-plus"></i>
+              </button>
+              <button class="btn-icon" title="Filter projects">
+                <i class="fas fa-filter"></i>
+              </button>
+            </div>
+          </div>
+          <div class="component-content">
+            <div class="projects-container">
+              <div class="placeholder">
+                <i class="fas fa-project-diagram placeholder-icon"></i>
+                <p>No projects yet</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Members Section -->
+        <section id="members" class="component-section hidden">
+          <div class="component-header">
+            <h2><i class="fas fa-users"></i> Members</h2>
+            <div class="component-actions">
+              <button class="btn-icon" title="Search members">
+                <i class="fas fa-search"></i>
+              </button>
+              <button class="btn-icon" title="Filter members">
+                <i class="fas fa-filter"></i>
+              </button>
+            </div>
+          </div>
+          <div class="component-content">
+            <div class="members-container">
+              <div class="placeholder">
+                <i class="fas fa-users placeholder-icon"></i>
+                <p>No members to display</p>
+              </div>
+              <!-- Member grid will be populated here when there are members -->
+              <div class="members-grid" style="display: none">
+                <!-- Example member cards would go here -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="component-section hidden">
+          <div class="component-header">
+            <h2><i class="fas fa-calendar-week"></i> My Schedule</h2>
+            <div class="component-actions">
+              <button class="btn-icon" title="Add to schedule">
+                <i class="fas fa-plus"></i>
+              </button>
+              <button class="btn-icon" title="Export schedule">
+                <i class="fas fa-download"></i>
+              </button>
+            </div>
+          </div>
+          <div class="component-content">
+            <div class="schedule-container">
+              <div class="placeholder">
+                <i class="fas fa-calendar-week placeholder-icon"></i>
+                <p>No schedule items yet</p>
+              </div>
+              <!-- Calendar will be shown here when there are schedule items -->
+              <div class="calendar-wrapper" style="display: none">
+                <!-- Calendar table would go here -->
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 BSCS 3A. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/dashboard.js"></script>
+  </body>
+</html>
