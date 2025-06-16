@@ -103,6 +103,13 @@ nav ul li a:hover::after {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+  z-index: 100;
+}
+
+.menu-toggle.active {
+  color: #007bff;
 }
 
 /* Hero Section */
@@ -443,6 +450,7 @@ footer {
     background: #fff;
     transition: 0.5s;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 99;
   }
 
   nav.active {
@@ -472,5 +480,11 @@ footer {
 
   .team-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  /* Components page specific */
+  body.components-page .menu-toggle {
+    position: relative;
+    z-index: 1001;
   }
 }

@@ -3,22 +3,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector("nav");
 
-  menuToggle.addEventListener("click", function () {
-    nav.classList.toggle("active");
-    menuToggle.classList.toggle("active");
-  });
+  if (menuToggle && nav) {
+    menuToggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      nav.classList.toggle("active");
+      menuToggle.classList.toggle("active");
+    });
 
-  // Close menu when clicking outside
-  document.addEventListener("click", function (event) {
-    if (
-      !nav.contains(event.target) &&
-      !menuToggle.contains(event.target) &&
-      nav.classList.contains("active")
-    ) {
-      nav.classList.remove("active");
-      menuToggle.classList.remove("active");
-    }
-  });
+    // Close menu when clicking outside
+    document.addEventListener("click", function (event) {
+      if (
+        !nav.contains(event.target) &&
+        !menuToggle.contains(event.target) &&
+        nav.classList.contains("active")
+      ) {
+        nav.classList.remove("active");
+        menuToggle.classList.remove("active");
+      }
+    });
+  }
 
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
